@@ -1,22 +1,19 @@
-#pipeline naame
 name: first CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-    print message:
     runs-on: ubuntu-latest
 
-    on :
-      push:
-        branches:
-                
     steps:
-        #step 1
+      # Step 1
       - name: Print message
         run: echo "Hello, this is the first CI/CD pipeline!"
 
-        #step 2
-      - name: Print message
+      # Step 2
+      - name: Print another message
         run: echo "Hello, this is the first CI/CD pipeline!"
-      
-    
